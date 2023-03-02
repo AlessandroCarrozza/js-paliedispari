@@ -2,24 +2,23 @@
 // chiedo all'utente di inserire una parola
 const userWord = prompt("Inserisci una parola e ti dirò se è palindroma.");
 
-// dichiaro una variabile con cui lavorerò nella function
-let reverseWord = "";
-
 
 // creo la function
 function palindromaSiNo (word) {
+
+    let reverse = "";
+
     for (let i = (word.length - 1); i >= 0 ; i--) {
         
-        reverseWord += word[i];     
+        reverse += word[i];     
         
     }
 
-    return reverseWord;
+    return reverse;
 }
 
 // invoco la function
-palindromaSiNo(userWord);
-
+let reverseWord = palindromaSiNo(userWord);
 
 
 // collegamento con il DOM 
