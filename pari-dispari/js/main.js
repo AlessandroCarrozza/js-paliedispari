@@ -21,7 +21,6 @@ function casualNumber (min, max) {
 
 // invoco la function dei numeri casuali
 casualNumber(1, 5);
-
 console.log(numberComputer);
 
 
@@ -38,5 +37,21 @@ function somma (firstNumber, secondNumber) {
 // invoco la function per la somma
 somma (numberUser, numberComputer);
 console.log(sommaPlayers);
+
+
+
+// collegamento al DOM
+const resultDom = document.getElementById("result");
+
+// output condizionale
+if (sommaPlayers % 2 == 0 && pariDispariUser == "pari") {
+    resultDom.innerHTML += `Hai vinto!!! </br> Hai scelto pari e la somma dei due numeri è ${sommaPlayers}.`;
+} else if (sommaPlayers % 2 !== 0 && pariDispariUser == "dispari") {
+    resultDom.innerHTML += `Hai vinto!!! </br> Hai scelto dispari e la somma dei due numeri è ${sommaPlayers}.`;
+} else if (sommaPlayers % 2 == 0 && pariDispariUser == "dispari") {
+    resultDom.innerHTML += `Hai perso! </br> Hai scelto dispari ma la somma dei due numeri è ${sommaPlayers}`;
+} else {
+    resultDom.innerHTML += `Hai perso! </br> Hai scelto pari ma la somma dei due numeri è ${sommaPlayers}`;
+}
 
 
