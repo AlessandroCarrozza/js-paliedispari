@@ -9,33 +9,28 @@ console.log(pariDispariUser);
 console.log(numberUser);
 
 
-// dichiaro variabile con cui andrò a lavorare nella function
-let numberComputer = "";
 
 // creo la function dei numeri casuali
 function casualNumber (min, max) {
-    numberComputer = Math.floor(Math.random() * max) + min;
+    const numberRandom = Math.floor(Math.random() * max) + min;
     
-    return numberComputer
+    return numberRandom;
 }
 
 // invoco la function dei numeri casuali
-casualNumber(1, 5);
+let numberComputer = casualNumber(1, 5);
 console.log(numberComputer);
 
 
-// dichiaro variabile con cui andrò a lavorare nella function
-let sommaPlayers = "";
-
 // creo la function per la somma
 function somma (firstNumber, secondNumber) {
-    sommaPlayers = firstNumber + secondNumber;
+    const sommaNumbers = firstNumber + secondNumber;
 
-    return sommaPlayers;
+    return sommaNumbers;
 }
 
 // invoco la function per la somma
-somma (numberUser, numberComputer);
+let sommaPlayers = somma (numberUser, numberComputer);
 console.log(sommaPlayers);
 
 
